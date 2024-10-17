@@ -2,6 +2,8 @@
 
 Script, given wordpress.org profile URL, fetches all the plugins the user has contributed to and then fetches the reviews for each plugin along with the date of the review and the date of the author's registration on wordpress.org.
 Saves the results in a JSON file for later analysis.
+
+For example analysis see [Jupyter Notebook](./example-output/analyze.ipynb)
 ```json
 [
   {
