@@ -16,6 +16,7 @@ public class UserReview
     public DateTime ReviewCreated { get; set; }
     public string AuthorUrl { get; set; }
     public DateTime AuthorCreated { get; set; }
+    public int ReviewsWritten { get; set; }
 }
 
 public class Scrape
@@ -37,7 +38,29 @@ public class Scrape
                 Console.WriteLine($"Failed to find member since for {author}");
                 continue;
             }
-
+            // extract reviews written from <p class="bbp-user-review-count">Reviews Written: 1</p>
+            var reviewsWritten = html.DocumentNode.SelectSingleNode(
+                "//p[@class='bbp-user-review-count']"
+            );
+            if (reviewsWritten != null)
+            {
+                var written = reviewsWritten.InnerText.Replace("Reviews Written:", string.Empty);
+                if (int.TryParse(written, out int count))
+                {
+                    Console.WriteLine($"Reviews written: {count}");
+                    // update reviews written
+                    foreach (var plugin in plugins)
+                    {
+                        foreach (var review in plugin.Reviews)
+                        {
+                            if (review.AuthorUrl == author)
+                            {
+                                review.ReviewsWritten = count;
+                            }
+                        }
+                    }
+                }
+            }
             string cleanedDate = Regex
                 .Replace(
                     memberSince.InnerText,
