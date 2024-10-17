@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wporgfkreview", "wporgfkreview\wporgfkreview.csproj", "{79BCBFD2-2569-4C21-AF49-87CBB20AA038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wporgfkreview.console", "wporgfkreview.console\wporgfkreview.console.csproj", "{28D8B593-9103-4C08-B4E6-A43CC00C1228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79BCBFD2-2569-4C21-AF49-87CBB20AA038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79BCBFD2-2569-4C21-AF49-87CBB20AA038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79BCBFD2-2569-4C21-AF49-87CBB20AA038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79BCBFD2-2569-4C21-AF49-87CBB20AA038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D8B593-9103-4C08-B4E6-A43CC00C1228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D8B593-9103-4C08-B4E6-A43CC00C1228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D8B593-9103-4C08-B4E6-A43CC00C1228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D8B593-9103-4C08-B4E6-A43CC00C1228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
